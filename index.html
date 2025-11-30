@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Préstamos</title>
+  <link rel="icon" type="image/png" href="icono.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logo-container" style="text-align:center; margin-bottom:10px;">
+  <img src="logo.png" alt="Logo" style="width:120px; height:120px;">
+</div>
+    <div class="logo-container" style="text-align:center; margin-bottom:20px;">
+</div>
+    <h1>Simulador de Préstamos</h1>
+
+    <div class="card">
+      <div class="field">
+        <label for="monto">Monto del préstamo (ARS)</label>
+        <input type="number" id="monto" placeholder="Ej: 100000" min="0">
+      </div>
+
+      <div class="field">
+        <label for="tipoPrestamo">Tipo de préstamo</label>
+        <select id="tipoPrestamo">
+          <option value="5">🏠 Hipotecario (5%)</option>
+          <option value="25">🚗 Prendario (25%)</option>
+          <option value="50">💳 Personal (50%)</option>
+          <option value="30">💼 Empresarial (30%)</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="meses">Plazo (meses)</label>
+        <input type="number" id="meses" placeholder="Ej: 12" min="1">
+      </div>
+
+      <button id="calcularBtn">Calcular</button>
+      <button id="resetBtn">Limpiar</button>
+
+      <div id="resultado" class="resultado"></div>
+    </div>
+
+    <section id="tablaContainer" class="card" style="display:none;">
+      <h2>Detalle de Cuotas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Mes</th>
+            <th>Cuota</th>
+            <th>Interés</th>
+            <th>Capital</th>
+            <th>Saldo</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
